@@ -1,0 +1,25 @@
+{
+  "name": "create-your-own-redux",
+  "version": "1.0.0",
+  "description": "create-your-own-redux",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "redux",
+    "diy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annatsu/create-your-own-redux.git"
+  },
+  "author": {
+    "name": "Brendon Pagano",
+    "url": "https://brendonpagano.com",
+    "email": "brendonpagano@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Annatsu/create-your-own-redux/issues"
+  },
+  "homepage": "https://github.com/Annatsu/create-your-own-redux#readme"
+}
