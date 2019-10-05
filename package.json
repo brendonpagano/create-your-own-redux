@@ -27,5 +27,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.3.0",
     "jest": "^24.9.0"
+  },
+  "jest": {
+    "testRegex": "(/test/.*\\.spec\\.[tj]s)$"
   }
 }

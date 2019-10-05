@@ -2,12 +2,16 @@
  * Creates a Redux store.
  *
  * @param {Function} reducer
- * @param {any} preloadedState
- * @param {Function} enhancer
+ * @param {any} [preloadedState]
+ * @param {Function} [enhancer]
  *
  * @return {Object}
  */
 function createStore(reducer, preloadedState, enhancer) {
+  if (typeof reducer !== 'function') {
+    throw new TypeError('reducer must be a function');
+  }
+
   let state = preloadedState || {};
 
   const storeListeners = [];
@@ -26,10 +30,15 @@ function createStore(reducer, preloadedState, enhancer) {
     return () => storeListeners.splice(currentListenersIndex, 1);
   };
 
+  const replaceReducer = (nextReducer) => {
+    reducer = nextReducer;
+  };
+
   return Object.freeze({
     getState,
     dispatch,
     subscribe,
+    replaceReducer,
   });
 }
 
